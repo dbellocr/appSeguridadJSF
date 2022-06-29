@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link href="#{request.contextPath}/resources/css/bootstrap.min.css" rel="styleSheet" type="text/css"/>
+        <link href="#{request.contextPath}/resources/css/estilos.css" rel="styleSheet" type="text/css"/>
+    </h:head>
+    <f:metadata>
+        <f:event type="preRenderView" listener="#{beanLogin.onPageLoad}"/>
+    </f:metadata>
+    <h:body>
+        <div class="login-panel">
+            <h:form prependId="false">
+                <fieldset class="p-3">
+                    <legend>Iniciar Sesión</legend>
+                    <div class="form-group">
+                        <label class="form-label mt-4">Nombre de usuario</label>
+                        <h:inputText class="form-control" value="#{beanLogin.usuario}"></h:inputText>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label mt-4">Contraseña</label>
+                        <h:inputSecret class="form-control" value="#{beanLogin.contrasenna}"></h:inputSecret>
+                    </div>
+                    <h:commandButton class="btn btn-primary" action="#{beanLogin.validarCredenciales()}" id="btn-iniciarSesion" value="Iniciar Sesion"></h:commandButton>                 
+                    <p:messages style="margin-top: 2rem"/>
+                </fieldset>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

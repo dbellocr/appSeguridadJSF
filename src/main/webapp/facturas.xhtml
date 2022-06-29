@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./layout/layout.xhtml">
+
+            <ui:define name="content">
+                  <h2>Mis Facturas</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha / Hora</th>
+                            <th scope="col">Especialidad</th>
+                            <th scope="col">Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-active">
+                            <td>28-6-2022</td>
+                            <td>Pediatria</td>
+                            <td>20.000 (I.V.I)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
